@@ -1,0 +1,10 @@
+packages:
+  - packages/*
+ 
+resolvePeersFromWorkspaceRoot: false
+
+saveExact: true
+
+shamefullyHoist: true
+
+verifyDepsBeforeRun: warn

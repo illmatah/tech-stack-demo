@@ -1,0 +1,30 @@
+{
+  "name": "demo-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "wrangler build",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "dev": "wrangler dev",
+    "lint": "eslint --cache ."
+  },
+  "dependencies": {
+    "@trpc/client": "11.10.0",
+    "@trpc/server": "11.10.0",
+    "better-auth": "1.4.20",
+    "dotenv": "17.2.3",
+    "drizzle-orm": "0.45.0",
+    "drizzle-zod": "0.8.3",
+    "zod": "4.3.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20251209.0",
+    "@types/node": "24.10.2",
+    "bundled-eslint-config": "0.7.3",
+    "drizzle-kit": "0.31.8",
+    "eslint": "9.39.1",
+    "some-tsconfig-preset": "3.0.0",
+    "wrangler": "4.69.0"
+  }
+}

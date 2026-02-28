@@ -1,0 +1,15 @@
+{
+  "name": "worker-name",
+  "compatibility_date": "2026-02-28",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "main": "src/server/index.ts",
+  "d1_databases": [
+    {
+      "database_id": "55935620-a218-4322-840b-0e901540175a",
+      "database_name": "stack-demo",
+      "binding": "DB"
+    }
+  ]
+}

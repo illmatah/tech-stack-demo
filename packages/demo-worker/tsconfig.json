@@ -1,0 +1,8 @@
+{
+  "extends": "some-tsconfig-preset/workers",
+  "include": [
+    "src/**/*.ts",
+    "*.ts",
+    "eslint.config.js"
+  ]
+}
