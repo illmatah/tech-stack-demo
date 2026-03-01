@@ -7,10 +7,10 @@
   "main": "src/server/index.ts",
   "d1_databases": [
     {
-      "database_id": "55935620-a218-4322-840b-0e901540175a",
-      "database_name": "stack-demo",
       "binding": "DB",
-      "remote": true
+      "migrations_dir": "./drizzle",
+      "database_id": "55935620-a218-4322-840b-0e901540175a",
+      "database_name": "stack-demo"
     }
   ]
 }

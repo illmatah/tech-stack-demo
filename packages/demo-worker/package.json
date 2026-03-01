@@ -11,7 +11,8 @@
     "build": "wrangler build",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "dev": "wrangler dev",
+    "db:migrate:local": "wrangler d1 migrations apply stack-demo --local --config ./wrangler.json",
+    "dev": "pnpm db:migrate:local && wrangler dev --local",
     "lint": "eslint --cache ."
   },
   "dependencies": {

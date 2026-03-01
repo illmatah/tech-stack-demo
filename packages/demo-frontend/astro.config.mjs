@@ -16,7 +16,7 @@ export default defineConfig({
     server: {
       proxy: {
         '/api': {
-          target: 'https://ai-edu-demo-stack.illmatah.workers.dev/',
+          target: 'http://localhost:8787',
           changeOrigin: true
         }
       }
