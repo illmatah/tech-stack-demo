@@ -28,32 +28,20 @@ export async function requireAuth(ctx: Context) {
     session
   }
 }
-
 /**
- * Optional: Check for specific permissions or roles
- * Returns 403 if user doesn't have required permission
+ * Authorization middleware for tRPC
+ * Checks if user has required permission
+ * Returns 403 if user does not have permission
  */
 export async function requirePermission(
   ctx: Context,
   _permission: string
 ): Promise<void> {
   const { user, session } = await requireAuth(ctx)
-
-  // Example: Check if user has specific role or permission
-  // You can customize this based on your needs
   if (!user || !session) {
     throw new TRPCError({
       code: 'FORBIDDEN',
       message: 'Insufficient permissions'
     })
   }
-
-  // Add your permission checking logic here
-  // For example:
-  // if (!user.permissions?.includes(permission)) {
-  //   throw new TRPCError({
-  //     code: 'FORBIDDEN',
-  //     message: `Missing required permission: ${permission}`
-  //   })
-  // }
 }

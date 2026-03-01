@@ -30,6 +30,10 @@ A Workers a Cloudflare serverless megoldása.
 
 SQLite alapú, Cloudflare által kínált adatbázis megoldás, ami a Workerhez köthető, ott belső kapcsolatként gyors és biztonságos adatbáziselérést biztosít.
 
+### [Drizzle ORM](https://orm.drizzle.team/)
+
+Egy TypeScript alapú ORM, ami támogatja a D1-et is, és elég jól integrálható a Worker környezetbe. Néha kicsit összezavarja a szintaxisa az AI-t, és nem mindig a legjobbak a hibaüzenetei, de még mindig az egyik legjobb lehetőség.
+
 ## Frontend
 
 A frontendet némi felügyelettel, de szinte teljes egészében AI írta, én nem pont így struktúrálnám, ha nulláról építenék egy production oldalt.
