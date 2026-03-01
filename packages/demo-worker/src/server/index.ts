@@ -5,7 +5,7 @@ import { bAuth } from '#/better-auth'
 
 
 export default {
-  async fetch(request: Request): Promise<Response> {
+  async fetch(request: Request, env: Env): Promise<Response> {
 
     const url = new URL(request.url)
     // Handle auth routes
@@ -17,7 +17,7 @@ export default {
       endpoint: '/trpc',
       req: request,
       router: appRouter,
-      createContext
+      createContext: opts => createContext({ ...opts, env })
     })
   }
 }
