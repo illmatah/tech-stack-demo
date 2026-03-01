@@ -3,3 +3,6 @@
 /packages/demo-frontend/.vscode
 *.tsbuildinfo
 packages/demo-worker/.eslintcache
+/packages/demo-worker/.wrangler
+packages/demo-frontend/.eslintcache
+packages/demo-worker/.eslintcache

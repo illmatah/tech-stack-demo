@@ -12,8 +12,11 @@ export const bAuth = (db?: D1Database) => {
     emailAndPassword: {
       enabled: true
     },
-    basePath: '/api/betterauth',
+    basePath: '/api/auth',
     trustedOrigins: [ 'http://localhost:4321' ],
+    advanced: {
+      disableOriginCheck: true
+    },
     database: drizzleAdapter(drizzle(db, {
       schema
     }), {

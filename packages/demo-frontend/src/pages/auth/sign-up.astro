@@ -1,0 +1,15 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro'
+import SectionHeader from '../../components/astro/SectionHeader.astro'
+import { SignUpForm } from '../../components/react/auth/SignUpForm'
+---
+
+<AppLayout title="Sign Up">
+  <section class="space-y-6">
+    <SectionHeader
+      title="Sign up"
+      description="Create your account in a minute."
+    />
+    <SignUpForm client:load />
+  </section>
+</AppLayout>

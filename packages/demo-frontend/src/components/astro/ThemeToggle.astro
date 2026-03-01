@@ -1,0 +1,47 @@
+---
+const label = 'Toggle dark mode'
+---
+
+<button
+  id="theme-toggle"
+  type="button"
+  class="rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-600 shadow-sm hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:bg-slate-800"
+  aria-label={label}
+  aria-pressed="false"
+>
+  Theme
+</button>
+
+<script is:inline>
+  const storageKey = 'theme'
+  const toggle = document.getElementById('theme-toggle')
+
+  const getPreferred = () => {
+    const stored = localStorage.getItem(storageKey)
+    if (stored === 'light' || stored === 'dark') return stored
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+
+  const applyTheme = (theme) => {
+    document.documentElement.classList.toggle('dark', theme === 'dark')
+    if (toggle) {
+      toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false')
+    }
+  }
+
+  applyTheme(getPreferred())
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark'
+      localStorage.setItem(storageKey, next)
+      applyTheme(next)
+    })
+  }
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    const stored = localStorage.getItem(storageKey)
+    if (stored) return
+    applyTheme(event.matches ? 'dark' : 'light')
+  })
+</script>

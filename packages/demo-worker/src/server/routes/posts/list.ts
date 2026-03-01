@@ -1,7 +1,7 @@
 import * as z from 'zod'
 import { publicProcedure } from '../../trpc'
 import { post } from '../../../db/post'
-import { and, ilike } from 'drizzle-orm'
+import { and, like } from 'drizzle-orm'
 
 /**
  * List posts with pagination and optional search query
@@ -18,7 +18,7 @@ export const listPosts = publicProcedure
 
     const where = []
     if (search) {
-      where.push(ilike(post.title, `%${search}%`))
+      where.push(like(post.title, `%${search}%`))
     }
 
     const posts = await opts.ctx.db

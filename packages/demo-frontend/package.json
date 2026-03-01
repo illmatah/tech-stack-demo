@@ -1,17 +1,19 @@
 {
   "name": "demo-frontend",
-  "type": "module",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
-    "dev": "astro dev",
+    "astro": "astro",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "astro dev",
+    "lint": "eslint --cache .",
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/react": "^4.4.2",
     "@astrojs/vue": "^5.1.4",
+    "@base-ui/react": "^1.0.0",
     "@tailwindcss/vite": "^4.2.1",
     "@trpc/client": "11.10.0",
     "@trpc/server": "11.10.0",

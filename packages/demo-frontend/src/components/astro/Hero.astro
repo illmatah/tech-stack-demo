@@ -1,0 +1,15 @@
+---
+const { headline, subhead } = Astro.props
+---
+
+<section class="grid gap-6 rounded-[28px] border border-white/70 bg-white/70 p-8 shadow-[0_30px_80px_-60px_rgba(15,23,42,0.5)] backdrop-blur">
+  <div class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+    Multi-framework showcase
+  </div>
+  <h1 class="text-3xl font-semibold text-slate-900 sm:text-4xl">
+    {headline}
+  </h1>
+  <p class="max-w-2xl text-base text-slate-600">
+    {subhead}
+  </p>
+</section>

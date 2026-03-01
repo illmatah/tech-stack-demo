@@ -9,7 +9,8 @@
     {
       "database_id": "55935620-a218-4322-840b-0e901540175a",
       "database_name": "stack-demo",
-      "binding": "DB"
+      "binding": "DB",
+      "remote": true
     }
   ]
 }
