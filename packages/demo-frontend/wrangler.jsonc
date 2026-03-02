@@ -12,5 +12,8 @@
 	},
 	"observability": {
     "enabled": true
+  },
+  "vars": {
+    "API_URL": "https://ai-edu-demo-stack.illmatah.workers.dev"
   }
 }

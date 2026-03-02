@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config'
+import { defineConfig, envField } from 'astro/config'
 
 import tailwindcss from '@tailwindcss/vite'
 
@@ -9,6 +9,12 @@ import vue from '@astrojs/vue'
 
 import react from '@astrojs/react'
 
+import { config } from 'dotenv'
+import { env } from 'better-auth'
+
+
+config()
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -16,13 +22,17 @@ export default defineConfig({
     server: {
       proxy: {
         '/api': {
-          target: 'http://localhost:8787',
+          target: env.API_URL ?? 'http://localhost:8787',
           changeOrigin: true
         }
       }
     }
   },
-
+  env: {
+    schema: {
+      API_URL: envField.string({ context: 'client', access: 'public', optional: true })
+    }
+  },
   adapter: cloudflare(),
   integrations: [ vue(), react() ]
 })

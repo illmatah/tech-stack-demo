@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "astro": "astro",
+    "astro:deploy": "pnpm build && wrangler deploy",
     "build": "astro build",
     "dev": "astro dev",
     "lint": "eslint --cache .",
@@ -23,6 +24,7 @@
     "better-auth": "1.4.20",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
+    "dotenv": "17.2.3",
     "lucide-react": "0.575.0",
     "radix-ui": "1.4.3",
     "react": "^19.2.4",
