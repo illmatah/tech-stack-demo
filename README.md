@@ -58,3 +58,7 @@ A pnpm egy npm alternatíva, gyorsabb, és jobban optimalizálja a telepített c
 ### eslint és tsconfig
 
 Az eslint egy statikus kódelemző eszköz, ami segít a kód minőségének fenntartásában, és a hibák mihamarabbi megtalálásában. A projektben mind az eslint, mind pedig a tsconfig azokkal a szabályokkal operál, amiket én már régóta használok, de valószínűleg egy kicsit szigorúbb, mint amire feltétlenül szükség lenne.
+
+### [Cloudflare AI Gateway](https://developers.cloudflare.com/ai-gateway/)
+
+Ebbe a projektbe ugyan nem integráltam, de ha valamelyik "nagy" AI szolgáltató API-ját szeretnénk használni, az AI Gateway hasznos lehet, ugyanis könnyen követhetővé teszi a token használatot, és beépítetten intézi a cache-t, rate limitet, retry-okat, szóval olyasmiket, amik jól jöhetnek. A Cloudflare saját AI API-t is kínál egyébként egy csomó modellel, de külső szolgáltatásokkal is remekül működik.
