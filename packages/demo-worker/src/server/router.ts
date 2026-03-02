@@ -1,6 +1,7 @@
 import { router } from './trpc'
 import { createPost, deletePost, getPost, listPosts, updatePost } from './routes/posts'
 
+
 export const appRouter = router({
   createPost,
   deletePost,

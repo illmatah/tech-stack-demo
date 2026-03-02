@@ -3,7 +3,11 @@ import { createContext } from './context'
 import { appRouter } from './router'
 import { bAuth } from '#/better-auth'
 
-
+/**
+ * Cloudflare Worker entry point
+ * To move to another platform, call betterauth and fetchRequestHandler with appropriate context in the platform's request handler
+ * Additional modification would be needed to use a different database (drizzle adapter change should be drop-in)
+ */
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     try {

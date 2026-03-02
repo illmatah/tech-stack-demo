@@ -12,7 +12,7 @@ Teljesen helyi futtatáshoz a következőket kell tenni:
 
 A backendet igyekeztem úgy összerakni, hogy minél kevésbé függjön a Cloudflare platformjától.
 
-Ha más platformon akarnánk hostolni, nem lenne ugyan egy kattintás, de minimális munkával megoldható, hiszen az egyes route-ok platformfüggetlenek, lényegében csak a [worker entrypointjában](./src/backend/worker.ts) szereplő függvényeket kell másik platform megfelelőjére cserélni.
+Ha más platformon akarnánk hostolni, nem lenne ugyan egy kattintás, de minimális munkával megoldható, hiszen az egyes route-ok platformfüggetlenek, lényegében csak a [worker entrypointjában](./packages/demo-worker/src/server/index.ts) szereplő függvényeket kell másik platform megfelelőjére cserélni.
 
 ### [Trpc](https://trpc.io/)
 

@@ -5,7 +5,7 @@ import {
   integer,
   index
 } from 'drizzle-orm/sqlite-core'
-import { user } from './schema'
+import { user } from './auth-schema'
 
 
 export const post = sqliteTable(

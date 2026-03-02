@@ -28,6 +28,7 @@ export async function requireAuth(ctx: Context) {
     session
   }
 }
+
 /**
  * Authorization middleware for tRPC
  * Checks if user has required permission
